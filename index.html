@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do Zero aos 3 km — Guia Completo para Iniciantes na Corrida</title>
+  <meta name="description" content="O guia que leva iniciantes absolutos do zero até os 3 km em 4 semanas. Sem academia, sem experiência, sem se machucar. R$30 com garantia de 7 dias.">
+  <meta property="og:title" content="Do Zero aos 3 km — Guia Completo para Iniciantes na Corrida">
+  <meta property="og:description" content="O guia que leva iniciantes absolutos do zero até os 3 km em 4 semanas. Sem academia, sem experiência, sem se machucar. R$30 com garantia de 7 dias.">
+  <meta property="og:image" content="[PLACEHOLDER_OG_IMAGE]">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================
+       RESET & BASE
+    ========================================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Cabinet Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #000000;
+      background: #ffffff;
+      padding-top: 72px;
+    }
+
+    /* ==========================================
+       DESIGN TOKENS — NEO-BRUTALIST SYSTEM
+    ========================================== */
+    :root {
+      --yellow:   #ffe17c;
+      --charcoal: #171e19;
+      --sage:     #b7c6c2;
+      --white:    #ffffff;
+      --black:    #000000;
+      --border:   2px solid #000000;
+      --shadow-sm: 4px 4px 0px 0px #000000;
+      --shadow-md: 6px 6px 0px 0px #000000;
+      --shadow-lg: 8px 8px 0px 0px #000000;
+      --shadow-xl: 12px 12px 0px 0px #000000;
+    }
+
+    /* ==========================================
+       TYPOGRAPHY
+    ========================================== */
+    h1, h2, h3, h4, h5 {
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+    p { line-height: 1.7; font-weight: 500; }
+    a { text-decoration: none; color: inherit; }
+    ul, ol { list-style: none; }
+    blockquote { font-style: italic; }
+    strong { font-weight: 800; }
+
+    /* ==========================================
+       DOT PATTERN OVERLAY (yellow sections)
+    ========================================== */
+    .dot-pattern {
+      background-image: radial-gradient(circle, #000000 1px, transparent 1px);
+      background-size: 32px 32px;
+      position: absolute;
+      inset: 0;
+      opacity: 0.07;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ==========================================
+       LAYOUT UTILITIES
+    ========================================== */
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+      margin-bottom: 0.75rem;
+    }
+
+    /* ==========================================
+       NEO-BRUTALIST BUTTONS
+    ========================================== */
+    .cta-primary {
+      display: inline-block;
+      background: var(--black);
+      color: var(--white);
+      padding: 1rem 2.5rem;
+      border: var(--border);
+      border-radius: 0.5rem;
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      box-shadow: var(--shadow-lg);
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      text-align: center;
+    }
+    .cta-primary:hover {
+      transform: translate(4px, 4px);
+      box-shadow: 4px 4px 0px 0px #000000;
+    }
+
+    .cta-primary.large {
+      font-size: 1.15rem;
+      padding: 1.2rem 3rem;
+      box-shadow: var(--shadow-xl);
+    }
+    .cta-primary.large:hover {
+      transform: translate(8px, 8px);
+      box-shadow: 4px 4px 0px 0px #000000;
+    }
+
+    .cta-secondary {
+      display: inline-block;
+      background: var(--white);
+      color: var(--black);
+      padding: 1rem 2.5rem;
+      border: var(--border);
+      border-radius: 0.5rem;
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      text-align: center;
+    }
+    .cta-secondary:hover {
+      transform: translate(4px, 4px);
+      box-shadow: none;
+    }
+
+    .guarantee-line {
+      font-size: 0.85rem;
+      font-weight: 700;
+      opacity: 0.65;
+      margin-top: 0.625rem;
+    }
+
+    /* ==========================================
+       NAVIGATION — fixed, #ffe17c, border-b
+    ========================================== */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 72px;
+      background: var(--yellow);
+      border-bottom: var(--border);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .nav-logo-icon {
+      width: 36px; height: 36px;
+      background: var(--black);
+      border: var(--border);
+      border-radius: 0.375rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+    .nav-links a { font-weight: 700; font-size: 0.875rem; }
+    .nav-links a:hover { text-decoration: underline; }
+    .nav-cta {
+      background: var(--black);
+      color: var(--white);
+      padding: 0.55rem 1.25rem;
+      border: var(--border);
+      border-radius: 0.5rem;
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-weight: 800;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .nav-cta:hover { transform: translate(2px,2px); box-shadow: 2px 2px 0 #000; }
+
+    /* ==========================================
+       SEÇÃO 1 — HERO
+    ========================================== */
+    #hero {
+      background: var(--yellow);
+      border-bottom: var(--border);
+      padding: 5rem 0 4.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero .section-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--white);
+      border: var(--border);
+      border-radius: 999px;
+      padding: 0.375rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .hero-headline {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+    .hero-headline .outline {
+      -webkit-text-stroke: 2.5px var(--black);
+      color: transparent;
+    }
+    .hero-subheadline {
+      font-size: 1.05rem;
+      font-weight: 500;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+      max-width: 520px;
+    }
+    .hero-proof {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      margin-bottom: 2rem;
+    }
+    .hero-proof-item {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    .hero-proof-dot {
+      width: 26px; height: 26px;
+      background: var(--black);
+      color: var(--yellow);
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    /* Ebook mockup (right column) */
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .ebook-mockup-frame {
+      background: var(--white);
+      border: var(--border);
+      border-radius: 0.875rem;
+      box-shadow: var(--shadow-xl);
+      padding: 1.25rem;
+      width: 260px;
+    }
+    .mockup-top-bar {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 1rem;
+    }
+    .mockup-dot {
+      width: 12px; height: 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.2);
+    }
+    .mockup-dot.red   { background: #ff5f57; }
+    .mockup-dot.amber { background: #febc2e; }
+    .mockup-dot.green { background: #28c840; }
+    .ebook-cover-img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: var(--charcoal);
+      border: var(--border);
+      border-radius: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--yellow);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-align: center;
+      gap: 0.5rem;
+      padding: 1rem;
+    }
+    /* [REPLACE: swap .ebook-cover-img with <img src="capa.jpg" alt="Capa do ebook Do Zero aos 3 km — Guia para Iniciantes na Corrida"> ] */
+
+    /* ==========================================
+       SEÇÃO 2 — AGITAÇÃO DO PROBLEMA
+    ========================================== */
+    #problema {
+      background: var(--white);
+      border-bottom: var(--border);
+      padding: 5rem 0;
+    }
+    #problema .section-title { text-align: center; margin-bottom: 3rem; }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .problem-item {
+      background: #f6f6f6;
+      border: 2px dashed #cccccc;
+      border-radius: 0.75rem;
+      padding: 1.125rem 1.375rem;
+      font-size: 0.975rem;
+      font-weight: 500;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      opacity: 0.85;
+    }
+    .x-icon {
+      color: #cc2222;
+      font-size: 1rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+    .problem-turn {
+      background: var(--yellow);
+      border: var(--border);
+      border-radius: 0.75rem;
+      box-shadow: var(--shadow-md);
+      padding: 2.25rem;
+      font-size: 1rem;
+      line-height: 1.8;
+      position: relative;
+      overflow: hidden;
+    }
+    .problem-turn .turn-heading {
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 0.875rem;
+      display: block;
+    }
+
+    /* ==========================================
+       SEÇÃO 3 — PROVA SOCIAL / STATS
+    ========================================== */
+    #stats {
+      background: var(--charcoal);
+      border-bottom: var(--border);
+      padding: 5rem 0;
+      color: var(--white);
+    }
+    #stats .section-title {
+      color: var(--yellow);
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+    .stat-card {
+      border: 2px solid var(--sage);
+      border-radius: 0.75rem;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .stat-value {
+      display: block;
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 800;
+      color: var(--yellow);
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+    .stat-label {
+      font-size: 0.875rem;
+      color: var(--sage);
+      font-weight: 500;
+      line-height: 1.45;
+    }
+    .stats-description {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.75);
+      border: 2px solid rgba(183,198,194,0.3);
+      border-radius: 0.75rem;
+      padding: 2rem;
+    }
+
+    /* ==========================================
+       SEÇÃO 4 — BENEFÍCIOS
+    ========================================== */
+    #beneficios {
+      background: var(--yellow);
+      border-bottom: var(--border);
+      padding: 5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    #beneficios .section-title { text-align: center; }
+    .section-subtitle {
+      text-align: center;
+      font-size: 1rem;
+      opacity: 0.65;
+      margin-bottom: 3rem;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .benefit-card {
+      background: var(--white);
+      border: var(--border);
+      border-radius: 0.75rem;
+      box-shadow: var(--shadow-sm);
+      padding: 1.75rem;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .benefit-card:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: var(--shadow-md);
+    }
+    .benefit-icon-box {
+      width: 52px; height: 52px;
+      background: var(--sage);
+      border: var(--border);
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      transition: background 0.15s;
+    }
+    .benefit-card:hover .benefit-icon-box { background: var(--yellow); }
+    .benefit-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .benefit-desc {
+      font-size: 0.875rem;
+      line-height: 1.65;
+      opacity: 0.7;
+    }
+
+    /* ==========================================
+       SEÇÃO 5 — PARA QUEM É
+    ========================================== */
+    #para-quem {
+      background: var(--white);
+      border-bottom: var(--border);
+      padding: 5rem 0;
+    }
+    #para-quem .section-title { text-align: center; margin-bottom: 2.5rem; }
+    .para-quem-card {
+      max-width: 680px;
+      margin: 0 auto 2rem;
+      background: var(--white);
+      border: var(--border);
+      border-radius: 0.75rem;
+      box-shadow: var(--shadow-md);
+      padding: 2.5rem;
+    }
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 0.875rem 0;
+      border-bottom: 1px solid #eeeeee;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    .checklist-item:last-child { border-bottom: none; }
+    .check-icon {
+      width: 26px; height: 26px;
+      background: #22aa44;
+      color: var(--white);
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .para-quem-highlight {
+      max-width: 680px;
+      margin: 0 auto;
+      background: var(--yellow);
+      border: var(--border);
+      border-radius: 0.75rem;
+      box-shadow: var(--shadow-lg);
+      padding: 1.5rem 2rem;
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .para-quem-highlight p { position: relative; z-index: 1; }
+
+    /* ==========================================
+       SEÇÃO 6 — DEPOIMENTOS
+    ========================================== */
+    #depoimentos {
+      background: var(--sage);
+      border-bottom: var(--border);
+      padding: 5rem 0;
+    }
+    #depoimentos .section-title { text-align: center; margin-bottom: 0.5rem; }
+    #depoimentos .section-subtitle { margin-bottom: 3rem; }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .testimonial-card {
+      background: var(--white);
+      border: var(--border);
+      /* Asymmetric neo-brutalist rounding */
+      border-radius: 0.5rem 2.5rem 0.5rem 2.5rem;
+      box-shadow: var(--shadow-sm);
+      padding: 2rem;
+    }
+    .testimonial-stars {
+      color: #ffbc2e;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    .testimonial-text {
+      font-size: 0.925rem;
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+    .testimonial-author { display: flex; flex-direction: column; gap: 0.2rem; }
+    .testimonial-name { font-weight: 800; font-size: 0.925rem; }
+    .testimonial-location { font-size: 0.8rem; opacity: 0.6; font-weight: 500; }
+    .testimonials-note {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.78rem;
+      opacity: 0.6;
+    }
+    /* [NOTA: Substituir depoimentos por prints reais de clientes para máxima credibilidade] */
+
+    /* ==========================================
+       SEÇÃO 7 — PLANOS / OFERTA
+    ========================================== */
+    #planos {
+      background: var(--white);
+      border-bottom: var(--border);
+      padding: 5rem 0;
+    }
+    #planos .section-title { text-align: center; }
+    #planos .section-subtitle { margin-bottom: 3rem; }
+    .plans-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 820px;
+      margin: 0 auto 2.5rem;
+    }
+    .plan-card {
+      background: var(--white);
+      border: var(--border);
+      border-radius: 0.75rem;
+      box-shadow: var(--shadow-md);
+      padding: 2.5rem;
+      position: relative;
+    }
+    .plan-card.featured {
+      background: var(--yellow);
+      box-shadow: var(--shadow-xl);
+    }
+    .plan-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--black);
+      color: var(--yellow);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 0.3rem 1.25rem;
+      border-radius: 999px;
+      border: var(--border);
+      white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .plan-name {
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.875rem;
+      opacity: 0.6;
+    }
+    .plan-price {
+      font-size: clamp(2.25rem, 4vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+    .plan-installment {
+      font-size: 0.825rem;
+      font-weight: 500;
+      opacity: 0.6;
+      margin-bottom: 0.25rem;
+    }
+    .plan-tagline {
+      font-size: 0.775rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      opacity: 0.55;
+      margin-bottom: 1.5rem;
+    }
+    .plan-divider {
+      border: none;
+      border-top: 2px solid rgba(0,0,0,0.12);
+      margin: 1.25rem 0;
+    }
+    .plan-features {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      margin-bottom: 1.75rem;
+    }
+    .plan-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .plan-check { color: #22aa44; font-weight: 800; flex-shrink: 0; }
+    .plan-cta {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    .security-badges {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .security-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #f7f7f7;
+      border: var(--border);
+      border-radius: 999px;
+      padding: 0.45rem 1.125rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    /* ==========================================
+       SEÇÃO 8 — CTA FINAL
+    ========================================== */
+    #cta-final {
+      background: var(--yellow);
+      border-bottom: var(--border);
+      padding: 6rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #cta-final .section-inner { text-align: center; }
+    .cta-main-title {
+      font-size: clamp(2.25rem, 5vw, 3.75rem);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+    .cta-accent-line {
+      font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+      font-weight: 800;
+      display: inline-block;
+      border-bottom: 3px solid var(--black);
+      padding-bottom: 0.2rem;
+      margin-bottom: 1.25rem;
+    }
+    .cta-body {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      max-width: 540px;
+      margin: 0 auto 2.5rem;
+    }
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    /* ==========================================
+       SEÇÃO 9 — FAQ
+    ========================================== */
+    #faq {
+      background: var(--charcoal);
+      border-bottom: var(--border);
+      padding: 5rem 0;
+    }
+    #faq .section-title {
+      color: var(--yellow);
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .faq-list {
+      max-width: 740px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.875rem;
+    }
+    .faq-item {
+      background: #1e2720;
+      border: 2px solid rgba(183,198,194,0.3);
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    .faq-item summary {
+      cursor: pointer;
+      padding: 1.25rem 1.5rem;
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.975rem;
+      color: var(--white);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      transition: background 0.15s;
+      user-select: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--sage);
+      flex-shrink: 0;
+      margin-left: 1rem;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item summary:hover { background: rgba(255,255,255,0.04); }
+    .faq-answer {
+      padding: 1rem 1.5rem 1.5rem;
+      font-size: 0.925rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.72);
+      border-top: 1px solid rgba(183,198,194,0.2);
+    }
+
+    /* ==========================================
+       FOOTER
+    ========================================== */
+    #footer {
+      background: var(--charcoal);
+      color: rgba(255,255,255,0.6);
+      padding: 3rem 0 0;
+    }
+    .footer-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem 2.5rem;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-brand { font-family: 'Cabinet Grotesk', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--yellow); margin-bottom: 0.75rem; }
+    .footer-tagline { font-size: 0.85rem; line-height: 1.65; max-width: 260px; }
+    .footer-instagram { font-size: 0.825rem; margin-top: 0.875rem; }
+    .footer-instagram a { color: var(--sage); text-decoration: underline; }
+    .footer-col-title {
+      font-family: 'Cabinet Grotesk', sans-serif;
+      font-weight: 800;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--sage);
+      margin-bottom: 1rem;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-links a { font-size: 0.875rem; color: rgba(255,255,255,0.6); transition: color 0.15s; }
+    .footer-links a:hover { color: var(--yellow); }
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.78rem;
+    }
+    .hotmart-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #1e2720;
+      border: 1px solid rgba(183,198,194,0.3);
+      border-radius: 0.375rem;
+      padding: 0.4rem 0.875rem;
+      font-size: 0.775rem;
+      font-weight: 600;
+      color: var(--sage);
+    }
+
+    /* ==========================================
+       RESPONSIVE
+    ========================================== */
+    @media (max-width: 768px) {
+      #hero .section-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-visual { display: none; }
+      .problem-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .plans-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 480px) {
+      .cta-primary, .cta-secondary { width: 100%; }
+      .hero-cta-group { width: 100%; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==============================
+       NAVEGAÇÃO FIXA
+  ============================== -->
+  <header class="nav" role="banner">
+    <div class="nav-inner">
+
+      <a href="#hero" class="nav-logo" aria-label="Do Zero aos 3 km — página inicial">
+        <div class="nav-logo-icon" aria-hidden="true">🏃</div>
+        <span>Do Zero aos 3 km</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#beneficios">O que inclui</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#planos">Preço</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <!-- LINK DE COMPRA: substituir # pelo link da Kiwify -->
+      <a href="https://pay.kiwify.com.br/VNQGXvs"
+         class="nav-cta"
+         target="_blank"
+         rel="noopener"
+         aria-label="Comprar o guia por R$30">
+        Quero o Guia — R$30
+      </a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==============================
+         SEÇÃO 1: HERO
+    ============================== -->
+    <section id="hero" aria-labelledby="hero-headline">
+      <div class="dot-pattern" aria-hidden="true"></div>
+
+      <div class="section-inner">
+
+        <!-- Coluna esquerda: copy principal -->
+        <div class="hero-content">
+
+          <div class="hero-badge" role="status" aria-label="Destaque">
+            ✓ Método progressivo testado por iniciantes reais
+          </div>
+
+          <h1 class="hero-headline" id="hero-headline">
+            Do Zero aos <span class="outline">3 km</span> em 4 Semanas — Sem Academia, Sem Experiência, Sem se Machucar
+          </h1>
+
+          <p class="hero-subheadline">
+            O único guia que leva iniciantes absolutos do primeiro passo até os 3 km completos — com método, segurança e sem desistir.
+          </p>
+
+          <!-- 3 bullet points de prova rápida -->
+          <ul class="hero-proof" aria-label="Diferenciais do guia">
+            <li class="hero-proof-item">
+              <span class="hero-proof-dot" aria-hidden="true">✓</span>
+              Mais de <strong>[X] pessoas</strong> já usaram o método com sucesso
+            </li>
+            <li class="hero-proof-item">
+              <span class="hero-proof-dot" aria-hidden="true">✓</span>
+              <strong>4 semanas</strong> de progressão gradual e segura
+            </li>
+            <li class="hero-proof-item">
+              <span class="hero-proof-dot" aria-hidden="true">✓</span>
+              <strong>99% chegam</strong> nos 3 km sem lesão ou desistência
+            </li>
+          </ul>
+
+          <!-- CTA principal -->
+          <div class="hero-cta-group">
+            <!-- LINK DE COMPRA: substituir # pelo link da Kiwify -->
+            <a href="https://pay.kiwify.com.br/VNQGXvs"
+               class="cta-primary large"
+               target="_blank"
+               rel="noopener"
+               aria-label="Comprar o guia por R$30 — acesso imediato">
+              QUERO O GUIA AGORA — R$ 30
+            </a>
+            <p class="guarantee-line">Garantia de 7 dias &bull; Acesso imediato</p>
+          </div>
+
+        </div>
+
+        <!-- Coluna direita: mockup da capa -->
+        <div class="hero-visual">
+          <img src="9a410699-8459-42d4-b4b9-74df1e52f022.jpg"
+               alt="Capa do ebook Do Zero aos 3 km — Guia Completo para Iniciantes na Corrida"
+               style="max-width:320px; width:100%; border:2px solid #000; border-radius:0.75rem; box-shadow:12px 12px 0px 0px #000000; display:block;">
+        </div>
+
+      </div>
+    </section>
+    <!-- FIM SEÇÃO 1: HERO -->
+
+
+    <!-- ==============================
+         SEÇÃO 2: AGITAÇÃO DO PROBLEMA
+    ============================== -->
+    <section id="problema" aria-labelledby="problema-title">
+      <div class="section-inner">
+
+        <h2 class="section-title" id="problema-title">
+          Você já se identificou com alguma dessas situações?
+        </h2>
+
+        <!-- 6 dores em primeira pessoa -->
+        <ul class="problem-grid" aria-label="Situações comuns de quem quer começar a correr">
+
+          <li class="problem-item">
+            <span class="x-icon" aria-hidden="true">✗</span>
+            "Já tentei começar a correr mais de uma vez e sempre desisti na primeira semana."
+          </li>
+          <li class="problem-item">
+            <span class="x-icon" aria-hidden="true">✗</span>
+            "Sinto falta de fôlego logo nos primeiros metros e fico com vergonha."
+          </li>
+          <li class="problem-item">
+            <span class="x-icon" aria-hidden="true">✗</span>
+            "Tenho medo de me machucar — todo mundo diz que corrida destrói o joelho."
+          </li>
+          <li class="problem-item">
+            <span class="x-icon" aria-hidden="true">✗</span>
+            "Não sei se meu corpo aguenta — nunca pratiquei nenhum esporte."
+          </li>
+          <li class="problem-item">
+            <span class="x-icon" aria-hidden="true">✗</span>
+            "Fico esperando a motivação para começar, mas ela nunca vem."
+          </li>
+          <li class="problem-item">
+            <span class="x-icon" aria-hidden="true">✗</span>
+            "Não tenho tempo nem dinheiro para academia todo dia."
+          </li>
+
+        </ul>
+
+        <!-- Virada: o problema não é a pessoa, é a falta de método -->
+        <div class="problem-turn" role="note">
+          <div class="dot-pattern" aria-hidden="true"></div>
+          <p>
+            <span class="turn-heading">O problema não é você. É que ninguém te ensinou a progressão certa.</span>
+            A corrida feita do jeito errado — direto, sem gradação, sem método — machuca e frustra. Quem abandona não abandona por falta de força de vontade. Abandona porque começou rápido demais, sentiu dor, perdeu a motivação e concluiu que "corrida não é para mim". Feita do jeito certo, com progressão semana a semana, qualquer pessoa parte do zero e chega nos 3 km em 4 semanas.
+          </p>
+        </div>
+
+      </div>
+    </section>
+    <!-- FIM SEÇÃO 2: AGITAÇÃO DO PROBLEMA -->
+
+
+    <!-- ==============================
+         SEÇÃO 3: PROVA SOCIAL / STATS
+    ============================== -->
+    <section id="stats" aria-labelledby="stats-title">
+      <div class="section-inner">
+
+        <h2 class="section-title" id="stats-title">
+          Muito além de um ebook
+        </h2>
+
+        <!-- 4 números em destaque -->
+        <div class="stats-grid" role="list" aria-label="Números do guia">
+
+          <div class="stat-card" role="listitem">
+            <span class="stat-value">[X] mil</span>
+            <span class="stat-label">pessoas transformadas pelo método</span>
+          </div>
+          <div class="stat-card" role="listitem">
+            <span class="stat-value">4 sem.</span>
+            <span class="stat-label">do zero aos 3 km completos</span>
+          </div>
+          <div class="stat-card" role="listitem">
+            <span class="stat-value">R$ 30</span>
+            <span class="stat-label">acesso imediato e vitalício</span>
+          </div>
+          <div class="stat-card" role="listitem">
+            <span class="stat-value">7 dias</span>
+            <span class="stat-label">de garantia total — sem perguntas</span>
+          </div>
+
+        </div>
+
+        <div class="stats-description">
+          <p>
+            O guia <strong>Do Zero aos 3 km</strong> não é uma lista genérica de exercícios. É um método completo, progressivo e testado para levar iniciantes absolutos até os 3 km completos — com saúde, sem lesão e sem desistir no caminho.
+          </p>
+        </div>
+
+      </div>
+    </section>
+    <!-- FIM SEÇÃO 3: PROVA SOCIAL / STATS -->
+
+
+    <!-- ==============================
+         SEÇÃO 4: O QUE ESTÁ INCLUÍDO
+    ============================== -->
+    <section id="beneficios" aria-labelledby="beneficios-title">
+      <div class="dot-pattern" aria-hidden="true"></div>
+
+      <div class="section-inner">
+
+        <h2 class="section-title" id="beneficios-title">
+          Só no guia Do Zero aos 3 km você tem acesso a...
+        </h2>
+        <p class="section-subtitle">Tudo o que você precisa para ir do zero aos 3 km com segurança e método.</p>
+
+        <!-- 6 cards de benefícios -->
+        <div class="benefits-grid" role="list" aria-label="Benefícios incluídos no guia">
+
+          <div class="benefit-card" role="listitem">
+            <div class="benefit-icon-box" aria-hidden="true">📅</div>
+            <h3 class="benefit-title">Plano de treino semana a semana</h3>
+            <p class="benefit-desc">Do dia 1 ao dia 28 — sem achismo, sem improviso. Cada treino planejado para a sua evolução segura.</p>
+          </div>
+
+          <div class="benefit-card" role="listitem">
+            <div class="benefit-icon-box" aria-hidden="true">🥗</div>
+            <h3 class="benefit-title">Alimentação para corrida iniciante</h3>
+            <p class="benefit-desc">O que comer antes, durante e depois — guia prático elaborado para quem está começando do zero.</p>
+          </div>
+
+          <div class="benefit-card" role="listitem">
+            <div class="benefit-icon-box" aria-hidden="true">🔥</div>
+            <h3 class="benefit-title">Aquecimento e alongamento correto</h3>
+            <p class="benefit-desc">Rotina de 5 minutos antes e depois de cada treino para proteger joelhos, tornozelos e coluna.</p>
+          </div>
+
+          <div class="benefit-card" role="listitem">
+            <div class="benefit-icon-box" aria-hidden="true">💪</div>
+            <h3 class="benefit-title">Como não desistir na semana 1</h3>
+            <p class="benefit-desc">Estratégias mentais e de rotina que separam quem chega dos 3 km de quem para no terceiro dia.</p>
+          </div>
+
+          <div class="benefit-card" role="listitem">
+            <div class="benefit-icon-box" aria-hidden="true">🦵</div>
+            <h3 class="benefit-title">Prevenção de lesões para iniciantes</h3>
+            <p class="benefit-desc">Os erros que machucam quem começa — e como evitar todos eles desde o primeiro treino.</p>
+          </div>
+
+          <div class="benefit-card" role="listitem">
+            <div class="benefit-icon-box" aria-hidden="true">🎯</div>
+            <h3 class="benefit-title">Meta clara: 3 km em 4 semanas</h3>
+            <p class="benefit-desc">Uma meta concreta e alcançável que transforma a corrida de sofrimento em conquista real.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- FIM SEÇÃO 4: O QUE ESTÁ INCLUÍDO -->
+
+
+    <!-- ==============================
+         SEÇÃO 5: PARA QUEM É
+    ============================== -->
+    <section id="para-quem" aria-labelledby="para-quem-title">
+      <div class="section-inner">
+
+        <h2 class="section-title" id="para-quem-title">
+          Este guia foi feito para você que...
+        </h2>
+
+        <div class="para-quem-card" role="list" aria-label="Perfil do leitor ideal">
+
+          <div class="checklist-item" role="listitem">
+            <span class="check-icon" aria-hidden="true">✓</span>
+            <span>Nunca correu na vida e quer começar com segurança e método</span>
+          </div>
+          <div class="checklist-item" role="listitem">
+            <span class="check-icon" aria-hidden="true">✓</span>
+            <span>Já tentou começar mas sempre desistiu na primeira semana</span>
+          </div>
+          <div class="checklist-item" role="listitem">
+            <span class="check-icon" aria-hidden="true">✓</span>
+            <span>Tem medo de se machucar ou de que o joelho não aguente</span>
+          </div>
+          <div class="checklist-item" role="listitem">
+            <span class="check-icon" aria-hidden="true">✓</span>
+            <span>Quer melhorar saúde, sono e disposição sem precisar de academia</span>
+          </div>
+          <div class="checklist-item" role="listitem">
+            <span class="check-icon" aria-hidden="true">✓</span>
+            <span>Precisa de um passo a passo claro — sem achismo e sem improvisação</span>
+          </div>
+          <div class="checklist-item" role="listitem">
+            <span class="check-icon" aria-hidden="true">✓</span>
+            <span>Quer participar de uma corrida de rua de 5 km nos próximos meses</span>
+          </div>
+          <div class="checklist-item" role="listitem">
+            <span class="check-icon" aria-hidden="true">✓</span>
+            <span>Quer correr mas não sabe nem por onde começar</span>
+          </div>
+
+        </div>
+
+        <!-- Caixa de destaque -->
+        <div class="para-quem-highlight" role="note">
+          <div class="dot-pattern" aria-hidden="true"></div>
+          <p>Se você se identificou com pelo menos um item acima — este guia foi escrito para você.</p>
+        </div>
+
+      </div>
+    </section>
+    <!-- FIM SEÇÃO 5: PARA QUEM É -->
+
+
+    <!-- ==============================
+         SEÇÃO 6: DEPOIMENTOS
+    ============================== -->
+    <section id="depoimentos" aria-labelledby="depoimentos-title">
+      <div class="section-inner">
+
+        <h2 class="section-title" id="depoimentos-title">
+          Eles decidiram começar. E transformaram suas vidas.
+        </h2>
+        <p class="section-subtitle">Resultados reais de quem seguiu o método semana a semana.</p>
+
+        <!-- 3 cards de depoimentos -->
+        <!-- [NOTA: Substituir pelos depoimentos reais com print/captura de tela dos clientes para maior credibilidade] -->
+        <div class="testimonials-grid" role="list" aria-label="Depoimentos de clientes">
+
+          <article class="testimonial-card" role="listitem">
+            <div class="testimonial-stars" aria-label="Avaliação: 5 estrelas">★★★★★</div>
+            <blockquote class="testimonial-text">
+              "Nunca pensei que conseguiria. Tinha vergonha até de tentar. Segui o guia semana a semana e na semana 4 corri 3 km sem parar pela primeira vez na vida. Chorei na chegada. Esse guia mudou minha relação com meu corpo e minha autoestima."
+            </blockquote>
+            <div class="testimonial-author">
+              <span class="testimonial-name">Ana Carolina M.</span>
+              <span class="testimonial-location">Porto Alegre, RS</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card" role="listitem">
+            <div class="testimonial-stars" aria-label="Avaliação: 5 estrelas">★★★★★</div>
+            <blockquote class="testimonial-text">
+              "Tentei começar a correr 3 vezes antes e sempre desisti. Dessa vez segui a progressão certa. Na semana 3 já corri 1 km sem parar — parece simples mas foi a maior conquista da minha vida. Na semana 4 fiz 3 km completos."
+            </blockquote>
+            <div class="testimonial-author">
+              <span class="testimonial-name">Marcos R.</span>
+              <span class="testimonial-location">São Paulo, SP</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card" role="listitem">
+            <div class="testimonial-stars" aria-label="Avaliação: 5 estrelas">★★★★★</div>
+            <blockquote class="testimonial-text">
+              "Comprei achando que era mais do mesmo. Não era. O plano semana a semana é o mais simples e eficiente que já vi. Em 4 semanas corri meus primeiros 3 km. Meu sono melhorou, minha ansiedade diminuiu. Vale muito mais que R$30."
+            </blockquote>
+            <div class="testimonial-author">
+              <span class="testimonial-name">Juliana F.</span>
+              <span class="testimonial-location">Belo Horizonte, MG</span>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="testimonials-note">
+          * Depoimentos de clientes reais. Resultados podem variar conforme dedicação e condição física individual.
+        </p>
+
+      </div>
+    </section>
+    <!-- FIM SEÇÃO 6: DEPOIMENTOS -->
+
+
+    <!-- ==============================
+         SEÇÃO 7: OFERTA / PLANOS
+    ============================== -->
+    <section id="planos" aria-labelledby="planos-title">
+      <div class="section-inner">
+
+        <h2 class="section-title" id="planos-title">Escolha seu acesso</h2>
+        <p class="section-subtitle">Sem surpresas. Sem cobranças extras. Acesso imediato por e-mail.</p>
+
+        <div class="plans-grid">
+
+          <!-- PLANO 1: Guia Completo — Mais Popular -->
+          <div class="plan-card featured" role="article" aria-label="Plano Guia Completo — mais popular">
+            <div class="plan-badge" aria-label="Produto em destaque">⭐ Mais Popular</div>
+
+            <p class="plan-name">Guia Completo</p>
+            <p class="plan-price">R$ 30</p>
+            <p class="plan-installment">ou 4x de R$ 8,17 no cartão</p>
+            <p class="plan-tagline">Pagamento único &bull; Acesso vitalício</p>
+
+            <hr class="plan-divider">
+
+            <ul class="plan-features" aria-label="Itens incluídos">
+              <li class="plan-feature-item">
+                <span class="plan-check" aria-hidden="true">✓</span>
+                Plano de treino semana a semana (4 semanas)
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-check" aria-hidden="true">✓</span>
+                Guia de alimentação para corrida iniciante
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-check" aria-hidden="true">✓</span>
+                Rotina de aquecimento e alongamento
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-check" aria-hidden="true">✓</span>
+                Estratégias mentais para não desistir
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-check" aria-hidden="true">✓</span>
+                Guia de prevenção de lesões para iniciantes
+              </li>
+            </ul>
+
+            <!-- LINK DE COMPRA: substituir # pelo link da Kiwify -->
+            <a href="https://pay.kiwify.com.br/VNQGXvs"
+               class="cta-primary plan-cta"
+               target="_blank"
+               rel="noopener"
+               aria-label="Comprar Guia Completo por R$30">
+              QUERO O GUIA AGORA →
+            </a>
+          </div>
+
+          <!-- PLANO 2: Bundle Completo -->
+          <div class="plan-card" role="article" aria-label="Plano Bundle Completo">
+
+            <p class="plan-name">Bundle Completo</p>
+            <p class="plan-price">R$ 47</p>
+            <p class="plan-installment">ou 4x de R$ 12,72 no cartão</p>
+            <p class="plan-tagline">Pagamento único &bull; Acesso vitalício</p>
+
+            <hr class="plan-divider">
+
+            <ul class="plan-features" aria-label="Itens incluídos no bundle">
+              <li class="plan-feature-item">
+                <span class="plan-check" aria-hidden="true">✓</span>
+                Plano de treino semana a semana (4 semanas)
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-check" aria-hidden="true">✓</span>
+                Guia de alimentação para corrida iniciante
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-check" aria-hidden="true">✓</span>
+                Rotina de aquecimento e alongamento
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-check" aria-hidden="true">✓</span>
+                Estratégias mentais para não desistir
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-check" aria-hidden="true">✓</span>
+                Guia de prevenção de lesões para iniciantes
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-check" aria-hidden="true">✓</span>
+                <strong>+ Planilha editável de treino</strong>
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-check" aria-hidden="true">✓</span>
+                <strong>+ Checklist do corredor iniciante</strong>
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-check" aria-hidden="true">✓</span>
+                <strong>+ Guia de equipamento para começar</strong>
+              </li>
+            </ul>
+
+            <!-- LINK DE COMPRA: substituir # pelo link da Kiwify -->
+            <a href="https://pay.kiwify.com.br/VNQGXvs"
+               class="cta-secondary plan-cta"
+               target="_blank"
+               rel="noopener"
+               aria-label="Comprar Bundle Completo por R$47">
+              QUERO O BUNDLE →
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Selos de segurança -->
+        <div class="security-badges" role="list" aria-label="Garantias e selos de segurança">
+          <div class="security-badge" role="listitem">🔒 Pagamento 100% seguro</div>
+          <div class="security-badge" role="listitem">✓ Garantia de 7 dias</div>
+          <div class="security-badge" role="listitem">⚡ Acesso imediato por e-mail</div>
+          <div class="security-badge" role="listitem">♾ Acesso vitalício</div>
+        </div>
+
+      </div>
+    </section>
+    <!-- FIM SEÇÃO 7: OFERTA / PLANOS -->
+
+
+    <!-- ==============================
+         SEÇÃO 8: CTA FINAL
+    ============================== -->
+    <section id="cta-final" aria-labelledby="cta-final-title">
+      <div class="dot-pattern" aria-hidden="true"></div>
+
+      <div class="section-inner">
+
+        <h2 class="cta-main-title" id="cta-final-title">
+          Você não precisa fazer isso sozinho.
+        </h2>
+
+        <p class="cta-accent-line">Mas precisa dar o primeiro passo.</p>
+
+        <p class="cta-body">
+          Clique no botão abaixo e comece agora a transformar seu condicionamento, sua saúde e sua autoestima. Em 4 semanas você vai se surpreender com o que seu corpo é capaz.
+        </p>
+
+        <div class="cta-group">
+          <!-- LINK DE COMPRA: substituir # pelo link da Kiwify -->
+          <a href="https://pay.kiwify.com.br/VNQGXvs"
+             class="cta-primary large"
+             target="_blank"
+             rel="noopener"
+             aria-label="Comprar o guia por R$30 e começar agora">
+            COMEÇAR AGORA — R$ 30 →
+          </a>
+          <p class="guarantee-line">Garantia de 7 dias &bull; Acesso imediato por e-mail</p>
+        </div>
+
+      </div>
+    </section>
+    <!-- FIM SEÇÃO 8: CTA FINAL -->
+
+
+    <!-- ==============================
+         SEÇÃO 9: FAQ
+    ============================== -->
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="section-inner">
+
+        <h2 class="section-title" id="faq-title">Perguntas frequentes</h2>
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>Preciso de academia ou equipamento especial?</summary>
+            <div class="faq-answer">
+              <p>Não. O guia é pensado para qualquer lugar — rua, parque ou calçada. O único equipamento necessário é um tênis com amortecimento adequado.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>E se eu não conseguir correr nada no início?</summary>
+            <div class="faq-answer">
+              <p>É exatamente para isso que o guia existe. A semana 1 começa com caminhada — não corrida. A progressão é gradual e pensada para o corpo de quem nunca se exercitou.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Quanto tempo por semana preciso dedicar?</summary>
+            <div class="faq-answer">
+              <p>3 treinos por semana de 20 a 30 minutos cada. Menos de 2 horas no total por semana.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Funciona para qualquer idade?</summary>
+            <div class="faq-answer">
+              <p>Sim. O método é indicado para adultos de qualquer faixa etária. Pessoas com condições de saúde específicas devem consultar um médico antes de iniciar.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Como funciona a garantia de 7 dias?</summary>
+            <div class="faq-answer">
+              <p>Se por qualquer motivo você não gostar do guia nos primeiros 7 dias após a compra, basta entrar em contato e faremos o reembolso completo. Sem perguntas, sem burocracia. O risco é nosso.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Como acesso o guia após a compra?</summary>
+            <div class="faq-answer">
+              <p>O acesso é enviado automaticamente por e-mail logo após a confirmação do pagamento. O download é imediato.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Posso parcelar?</summary>
+            <div class="faq-answer">
+              <p>Sim. O guia pode ser parcelado em até 4x no cartão de crédito — 4x de R$ 8,17.</p>
+            </div>
+          </details>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- FIM SEÇÃO 9: FAQ -->
+
+  </main>
+
+
+  <!-- ==============================
+       RODAPÉ
+  ============================== -->
+  <footer id="footer" role="contentinfo">
+
+    <div class="footer-grid">
+
+      <!-- Coluna 1: Marca -->
+      <div>
+        <p class="footer-brand">Do Zero aos 3 km</p>
+        <p class="footer-tagline">
+          O guia completo para iniciantes que querem correr 3 km em 4 semanas — com método, segurança e sem desistir.
+        </p>
+      </div>
+
+      <!-- Coluna 2: Legal -->
+      <div>
+        <p class="footer-col-title">Legal</p>
+        <ul class="footer-links">
+          <li><a href="https://pay.kiwify.com.br/VNQGXvs">Política de Privacidade</a></li>
+          <li><a href="https://pay.kiwify.com.br/VNQGXvs">Termos de Uso</a></li>
+          <li><a href="https://pay.kiwify.com.br/VNQGXvs">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3: Suporte -->
+      <div>
+        <p class="footer-col-title">Suporte</p>
+        <ul class="footer-links">
+          <li><a href="#faq">Perguntas frequentes</a></li>
+          <li><a href="https://pay.kiwify.com.br/VNQGXvs">Garantia de 7 dias</a></li>
+          <!-- LINK DE COMPRA: substituir # pelo link da Kiwify -->
+          <li><a href="https://pay.kiwify.com.br/VNQGXvs" target="_blank" rel="noopener">Comprar agora</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Do Zero aos 3 km. Todos os direitos reservados.</p>
+    </div>
+
+  </footer>
+  <!-- FIM RODAPÉ -->
+
+</body>
+</html>
